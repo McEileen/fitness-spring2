@@ -6,6 +6,6 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 
 import java.util.List;
 
-public interface IUserRepository extends PagingAndSortingRepository<User, Integer> {
-    public User findByUsername(String username);
+public interface IRunRepository extends PagingAndSortingRepository<Run, Integer> {
+    public Run findById(int Id);
 }
