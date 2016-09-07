@@ -38,7 +38,7 @@ public class Position {
     public void setVersion(int version) {this.version = version;}
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name="current_time")
+    @Column(name="ctime")
     public Date getCurrentTime() {
         return currentTime;
     }

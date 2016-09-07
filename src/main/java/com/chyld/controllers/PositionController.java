@@ -32,6 +32,8 @@ public class PositionController {
     @RequestMapping(value = "/{deviceId}", method = RequestMethod.POST)
     public Position createPosition(Principal user, @PathVariable int deviceId,  @RequestBody Position newPosition) {
 
+        newPosition.setCurrentTime(new Date());
+
         Device myDevice = deviceService.findDeviceById(deviceId);
         List<Run> allRuns = myDevice.getRuns();
         Run myRun = null;
@@ -50,6 +52,7 @@ public class PositionController {
         // if there is an open run, add this position to the list of positions
         List<Position> updatedPositions = myRun.getPositions();
         updatedPositions.add(newPosition);
+        myRun.setPositions(updatedPositions);
         runService.saveRun(myRun);
         return newPosition;
         }

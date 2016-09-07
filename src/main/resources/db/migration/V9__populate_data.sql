@@ -22,5 +22,5 @@ VALUES ('0', '1', '2016-01-02', '2016-01-03', '2016-01-04', '2016-01-02');
 INSERT INTO `fitness`.`runs` (`version`, `device_id`, `start_time`, `created`, `modified`)
 VALUES ('0', '1', '2016-01-02', '2016-01-02', '2016-01-02');
 
-INSERT INTO `fitness`.`positions` (`version`, `run_id`, `current_time`, `latitude`, `longitude`, `altitude`, `created`, `modified`)
+INSERT INTO `fitness`.`positions` (`version`, `run_id`, `ctime`, `latitude`, `longitude`, `altitude`, `created`, `modified`)
 VALUES ('0', '1', '2016-01-02', '1', '1', '1', '2016-01-02', '2016-01-02');
